@@ -26,39 +26,50 @@ buttons = [29, 31, 33, 32, 35, 37]  # left, up, right, down, a, b
 for i in range(len(buttons)):
     GPIO.setup(buttons[i], GPIO.IN)
 
+background = 'backgroundMusic/'
+font = 'font/'
+images = 'images/'
+soundEffect = 'soundEffect/'
+
 # 전체화면으로 설정
 screen = pygame.display.set_mode((gameWidth, gameHeight), pygame.FULLSCREEN)
 clock = pygame.time.Clock()  # FPS 설정 변수
 pygame.mouse.set_visible(False)  # 마우스 포인터 삭제
-gameFont24 = pygame.font.Font('Starjedi.ttf', 24)  # 'score' 숫자 출력 폰트
-numberFont16 = pygame.font.Font('malgunbd.ttf', 16)  # 'money' 숫자 출력 폰트
-numberFont20 = pygame.font.Font('malgunbd.ttf', 20)  # 'money' 숫자 출력 폰트
-playerExplosion = pygame.image.load('player_explosion.png')  # player 폭발 이미지
-playerHit = pygame.image.load('player_hit.png')  # player hit 이미지
-lifeImage = pygame.image.load('life.png')  # 생명 이미지
-missileImage = pygame.image.load('missile.png')  # 미사일 이미지
-moneyBag = pygame.image.load('moneybag.png')  # 돈주머니 이미지
-moneyUp = pygame.image.load('moneyup.png')  # 돈 얻는 이미지
-nuclearMissileImage = pygame.image.load('nuclear_missile.png')  # 핵 미사일 이미지
-direction = ['Down', 'Right', 'Left']  # UFO 진행 방향
-pattern = ['straight', 'straight', 'leftRight', 'leftRight', 'slow']  # UFO Missile 공격 패턴
-startBackgroundMusic = pygame.mixer.Sound('Powerup.wav')  # 게임 시작화면 배경음악
-backgroundMusic = pygame.mixer.Sound('Epic_Journey.wav')  # 게임 배경음악
-stationSound = pygame.mixer.Sound('station.wav')  # 우주정거장 배경음악
-shootingSound = pygame.mixer.Sound('laser_gun.wav')  # 발사 효과음 로드
-coinSound = pygame.mixer.Sound('coin.wav')  # 돈 효과음 로드
-playerHitSound = pygame.mixer.Sound('player_hit.wav')  # 플레이어 hit 효과음 로드
-playerExplosionSound = pygame.mixer.Sound('player_explosion.wav')  # 플레이어 폭발 효과음 로드
-ufoExplosionSound = pygame.mixer.Sound('ufo_explosion.wav')  # ufo 폭발 효과음 로드
-warning = pygame.mixer.Sound('warning.wav')  # 핵미사일 경보 효과음
-nuclearSound = pygame.mixer.Sound('launched_nuclear.wav')  # 핵미사일 날라가는 효과음
-nuclearExplosionSound = pygame.mixer.Sound('nuclear_explosion.wav')  # 핵미사일 폭발하는 효과음
-clickSound = pygame.mixer.Sound('click.wav')  # 클릭 효과음
-clickSound2 = pygame.mixer.Sound('click2.wav')  # 클릭 효과음2
-buySound = pygame.mixer.Sound('buy.wav')  # 구매 효과음
-errorSound = pygame.mixer.Sound('error.wav')  # 에러 효과음
-bossExplosion01 = pygame.image.load('boss_explosion01.png')  # 보스 폭발 효과1
-bossExplosion02 = pygame.image.load('boss_explosion02.png')  # 보스 폭발 효과2
+
+# font
+gameFont24 = pygame.font.Font(font + 'Starjedi.ttf', 24)  # 'score' 숫자 출력 폰트
+numberFont16 = pygame.font.Font(font + 'malgunbd.ttf', 16)  # 'money' 숫자 출력 폰트
+numberFont20 = pygame.font.Font(font + 'malgunbd.ttf', 20)  # 'money' 숫자 출력 폰트
+
+# image
+playerExplosion = pygame.image.load(images + 'player_explosion.png')  # player 폭발 이미지
+playerHit = pygame.image.load(images + 'player_hit.png')  # player hit 이미지
+lifeImage = pygame.image.load(images + 'life.png')  # 생명 이미지
+missileImage = pygame.image.load(images + 'missile.png')  # 미사일 이미지
+moneyBag = pygame.image.load(images + 'moneybag.png')  # 돈주머니 이미지
+moneyUp = pygame.image.load(images + 'moneyup.png')  # 돈 얻는 이미지
+nuclearMissileImage = pygame.image.load(images + 'nuclear_missile.png')  # 핵 미사일 이미지
+bossExplosion01 = pygame.image.load(images + 'boss_explosion01.png')  # 보스 폭발 효과1
+bossExplosion02 = pygame.image.load(images + 'boss_explosion02.png')  # 보스 폭발 효과2
+
+# background music
+startBackgroundMusic = pygame.mixer.Sound(background + 'Powerup.wav')  # 게임 시작화면 배경음악
+backgroundMusic = pygame.mixer.Sound(background + 'Epic_Journey.wav')  # 게임 배경음악
+stationSound = pygame.mixer.Sound(background + 'station.wav')  # 우주정거장 배경음악
+
+# sound effect
+shootingSound = pygame.mixer.Sound(soundEffect + 'laser_gun.wav')  # 발사 효과음 로드
+coinSound = pygame.mixer.Sound(soundEffect + 'coin.wav')  # 돈 효과음 로드
+playerHitSound = pygame.mixer.Sound(soundEffect + 'player_hit.wav')  # 플레이어 hit 효과음 로드
+playerExplosionSound = pygame.mixer.Sound(soundEffect + 'player_explosion.wav')  # 플레이어 폭발 효과음 로드
+ufoExplosionSound = pygame.mixer.Sound(soundEffect + 'ufo_explosion.wav')  # ufo 폭발 효과음 로드
+warning = pygame.mixer.Sound(soundEffect + 'warning.wav')  # 핵미사일 경보 효과음
+nuclearSound = pygame.mixer.Sound(soundEffect + 'launched_nuclear.wav')  # 핵미사일 날라가는 효과음
+nuclearExplosionSound = pygame.mixer.Sound(soundEffect + 'nuclear_explosion.wav')  # 핵미사일 폭발하는 효과음
+clickSound = pygame.mixer.Sound(soundEffect + 'click.wav')  # 클릭 효과음
+clickSound2 = pygame.mixer.Sound(soundEffect + 'click2.wav')  # 클릭 효과음2
+buySound = pygame.mixer.Sound(soundEffect + 'buy.wav')  # 구매 효과음
+errorSound = pygame.mixer.Sound(soundEffect + 'error.wav')  # 에러 효과음
 
 # sprite 그룹 설정
 playerMissiles = pygame.sprite.Group()  # Player 미사일 그룹
@@ -66,6 +77,7 @@ ufos = pygame.sprite.Group()  # UFO 그룹
 ufoMissiles = pygame.sprite.Group()  # UFOmissile 그룹
 nuclear = pygame.sprite.Group()  # Nuclear 그룹
 bossMissiles = pygame.sprite.Group()  # Boss 미사일 그룹
+
 
 # 게임 진행상황, 환경설정 변수
 FPS = 60  # 초당 프레임
@@ -89,12 +101,14 @@ life = 100  # player 생명
 changeDir = False  # 전기 이벤트의 방향을 바꿔주는 변수
 imageTime = 0.8  # 이미지 출력 시간
 
+direction = ['Down', 'Right', 'Left']  # UFO 진행 방향
+pattern = ['straight', 'straight', 'leftRight', 'leftRight', 'slow']  # UFO Missile 공격 패턴
 
 # Player class
 class Player(pygame.sprite.Sprite):
     def __init__(self, spaceshipCount):
         super(Player, self).__init__()
-        self.image = pygame.image.load('spaceship_level' + spaceshipCount + '.png').convert_alpha()
+        self.image = pygame.image.load(images + 'spaceship_level' + spaceshipCount + '.png').convert_alpha()
         self.mask = pygame.mask.from_surface(self.image)
         self.rect = self.image.get_rect()
         self.centerX = self.rect.centerx
@@ -118,7 +132,7 @@ class UFO(pygame.sprite.Sprite):
         super(UFO, self).__init__()
         # UFO 오브젝트 관련 설정
         ufos = ['ufo01.png', 'ufo02.png', 'ufo03.png', 'ufo04.png'] # missileType = 미사일 레벨
-        self.image = pygame.image.load(random.choice(ufos)).convert_alpha()
+        self.image = pygame.image.load(images + random.choice(ufos)).convert_alpha()
         self.mask = pygame.mask.from_surface(self.image)
         self.rect = self.image.get_rect()
         self.rect.x = xpos
@@ -196,8 +210,8 @@ class UFOMissile(pygame.sprite.Sprite):
     def __init__(self, xpos, ypos, missileType, missilePattern, ufoMissileSpeed, ufoMissileStartTime):
         # xpos, ypos : UFO 클래스에서 받아온 UFO의 현재 좌표
         super(UFOMissile, self).__init__()
-        self.image = pygame.image.load('ufoMissile_level' + missileType + '.png')
-        self.image2 = pygame.image.load('energy_missile.png')
+        self.image = pygame.image.load(images + 'ufoMissile_level' + missileType + '.png')
+        self.image2 = pygame.image.load(images + 'energy_missile.png')
         self.rect = self.image.get_rect()
         self.rect.x = xpos
         self.rect.y = ypos
@@ -254,7 +268,7 @@ class UFOMissile(pygame.sprite.Sprite):
 class Missile(pygame.sprite.Sprite):
     def __init__(self, spaceshipCount, xpos, ypos, speed):
         super(Missile, self).__init__()
-        self.image = pygame.image.load('missile_level' + spaceshipCount + '.png')
+        self.image = pygame.image.load(images + 'missile_level' + spaceshipCount + '.png')
         self.rect = self.image.get_rect()
         self.centerX = self.rect.centerx
         self.centerY = self.rect.centery
@@ -277,9 +291,9 @@ class Missile(pygame.sprite.Sprite):
 class Nuclear(pygame.sprite.Sprite):
     def __init__(self):
         super(Nuclear, self).__init__()
-        self.image = pygame.image.load('launched_nuclear.png')  # 핵 미사일 발사 이미지
-        self.image2 = pygame.image.load('white.png')
-        self.image3 = pygame.image.load('nuclear_explosion.png')  # 핵 폭발 이미지
+        self.image = pygame.image.load(images + 'launched_nuclear.png')  # 핵 미사일 발사 이미지
+        self.image2 = pygame.image.load(images + 'white.png')
+        self.image3 = pygame.image.load(images + 'nuclear_explosion.png')  # 핵 폭발 이미지
         self.rect = self.image.get_rect()
         self.rect.x = 220
         self.rect.y = 850
@@ -338,7 +352,7 @@ class Nuclear(pygame.sprite.Sprite):
 class Boss(pygame.sprite.Sprite):
     def __init__(self, level):
         super(Boss, self).__init__()
-        self.image = pygame.image.load('boss0' + level + '.png').convert_alpha()
+        self.image = pygame.image.load(images + 'boss0' + level + '.png').convert_alpha()
         self.mask = pygame.mask.from_surface(self.image)
         self.rect = self.image.get_rect()
         self.rect.x = 10
@@ -427,7 +441,7 @@ class Boss(pygame.sprite.Sprite):
 class BossMissile(pygame.sprite.Sprite):
     def __init__(self, xpos, ypos, pattern, type):
         super(BossMissile, self).__init__()
-        self.image = pygame.image.load('boss_missile0' + type + '.png')
+        self.image = pygame.image.load(images + 'boss_missile0' + type + '.png')
         self.rect = self.image.get_rect()
         self.rect.x = xpos
         self.rect.y = ypos
@@ -450,7 +464,7 @@ class BossMissile(pygame.sprite.Sprite):
 class Electricity(pygame.sprite.Sprite):
     def __init__(self, speed):
         super(Electricity, self).__init__()
-        self.image = pygame.image.load('electric.png').convert_alpha()
+        self.image = pygame.image.load(images + 'electric.png').convert_alpha()
         self.mask = pygame.mask.from_surface(self.image)
         self.rect = self.image.get_rect()
         self.rect.x = 0
@@ -538,7 +552,7 @@ def run():
     bossExplosionImage = False  # boss 폭발 이미지
 
     spaceshipCount = str(spaceshipLevel)
-    background = pygame.image.load('background_level' + roundCount + '.png')
+    background = pygame.image.load(images + 'background_level' + roundCount + '.png')
 
     player = Player(spaceshipCount)  # player 객체 생성
     player.set_pos(gameWidth * 0.5, gameHeight * 0.9)  # spaceship 초기 위치 지정
@@ -933,7 +947,7 @@ def gameStart():
     for i in range(len(buttons)):
         GPIO.setup(buttons[i], GPIO.IN)
 
-    background = pygame.image.load('game_start.png')
+    background = pygame.image.load(images + 'game_start.png')
     startBackgroundMusic.play()  # 배경음악 출력
 
     while True:
@@ -966,7 +980,7 @@ def gameEx():
     for i in range(len(buttons)):
         GPIO.setup(buttons[i], GPIO.IN)
 
-    background = pygame.image.load('game_ex.png')
+    background = pygame.image.load(images + 'game_ex.png')
 
     while True:
         screen.blit(background, (0, 0))
@@ -1009,7 +1023,7 @@ def station():
     while True:
         pygame.display.update()
         selectCount = str(selectNum)
-        stationImage = pygame.image.load('station' + spaceshipCount + selectCount + '.jpg')
+        stationImage = pygame.image.load(images + 'station' + spaceshipCount + selectCount + '.jpg')
         screen.blit(stationImage, (0, 0))
         draw_text(format(money), numberFont20, screen, 80, 765, WHITE)
 
@@ -1066,7 +1080,7 @@ def station():
                 # 게임 시작으로 넘어 가기 위해 메시지창을 띄운다
                 while True:
                     buttonState[4] = GPIO.input(buttons[4])
-                    question_image = pygame.image.load('question.jpg')
+                    question_image = pygame.image.load(images + 'question.jpg')
                     screen.blit(question_image, (0, 0))
                     pygame.display.update()
                     if buttonState[4] == 1:
@@ -1087,7 +1101,7 @@ def gameOver():
     money = 0
     missileCount = 0
 
-    gameOverImage = pygame.image.load('gameover.png')  # 게임 오버 이미지
+    gameOverImage = pygame.image.load(images + 'gameover.png')  # 게임 오버 이미지
 
     while True:
         screen.blit(gameOverImage, (0, 0))
@@ -1103,7 +1117,7 @@ def gameOver():
 def gameEnd():
     global buttonState, score, money, missileCount
 
-    backgroundMusic = pygame.mixer.Sound('Game_Over.wav') 
+    backgroundMusic = pygame.mixer.Sound(background + 'Game_Over.wav')
     backgroundMusic.play()
     
     bossMissiles.empty()
@@ -1113,7 +1127,7 @@ def gameEnd():
     money = 0
     missileCount = 0
 
-    gameEndImg = pygame.image.load('game_ending.png')  # 게임 엔딩 이미지
+    gameEndImg = pygame.image.load(images + 'game_ending.png')  # 게임 엔딩 이미지
 
     while True:
         screen.blit(gameEndImg, (0, 0))

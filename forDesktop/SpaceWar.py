@@ -1025,7 +1025,7 @@ def gameOver():
 def gameEnd():
     global buttonState, score, money, missileCount
 
-    backgroundMusic = pygame.mixer.Sound(images + 'Game_Over.wav')
+    backgroundMusic = pygame.mixer.Sound(background + 'Game_Over.wav')
     backgroundMusic.play()
 
     bossMissiles.empty()
