@@ -1,4 +1,4 @@
-# Python-Simple-Shooter-Game
+# Python Simple Shooter Game
 Versions: RaspberryPi, Desktop(Run on Python)
 
 forRaspberryPi 폴더에있는 실행파일은 라즈베리파이에서 실행되도록 만든 프로그램입니다.
