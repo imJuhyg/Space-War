@@ -1,4 +1,4 @@
-<img width=400 height=178 src="https://user-images.githubusercontent.com/67512011/122672573-26a6c600-d207-11eb-9d35-4b0d4d043fc6.jpeg">
+<img width=450 height=201 src="https://user-images.githubusercontent.com/67512011/122672573-26a6c600-d207-11eb-9d35-4b0d4d043fc6.jpeg">
 
 # PythonSimpleShooterGame - 'Space War'
 
