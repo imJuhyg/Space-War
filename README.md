@@ -9,4 +9,8 @@
 <img width=300 height=89 src="https://user-images.githubusercontent.com/67512011/122669969-94002a00-d1fa-11eb-991b-60af09d870fc.gif">
 
 ## 게임방법
-<img width=200 height=300 src="https://user-images.githubusercontent.com/67512011/122670210-bf374900-d1fb-11eb-91cb-18aa383d2f19.jpg">
+방향키(W, A, S, D)로 전투기를 조작하고 <SPACE BAR>와 <K> 키로 총알과 미사일을 발사할 수 있습니다.
+** 한글 입력 모드 상태에서는 조작되지 않을 수도 있습니다.
+  
+## 실행화면
+  
