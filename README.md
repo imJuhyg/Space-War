@@ -1,6 +1,6 @@
 # PythonSimpleShooterGame - 'Space War' 
 
-<img width=450 height=201 src="https://user-images.githubusercontent.com/67512011/122672573-26a6c600-d207-11eb-9d35-4b0d4d043fc6.jpeg">
+<img width=450 height=201 src="https://user-images.githubusercontent.com/67512011/122677969-ae003380-d21f-11eb-87c4-221a57edbef7.jpeg">
 
 #
 [3학년 1학기 IoT시스템실습 과목 프로젝트]
