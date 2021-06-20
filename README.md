@@ -48,3 +48,5 @@
 가끔 전기 이벤트가 생성됩니다. 한번 닿기만 해도 게임이 끝나니 조심하세요!
 
 <img src="https://user-images.githubusercontent.com/67512011/122672211-55bc3800-d205-11eb-95ba-d32fe1ae170a.gif">
+
+#
