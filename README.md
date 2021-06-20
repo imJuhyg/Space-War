@@ -25,3 +25,7 @@
 ### 스테이지
 한 스테이지가 끝날때마다 보스가 등장하며 총 다섯개의 스테이지가 있습니다.
 
+<img src="https://user-images.githubusercontent.com/67512011/122671911-c6faeb80-d203-11eb-9d62-b5e9e65b7924.gif">
+<img src="https://user-images.githubusercontent.com/67512011/122671865-93b85c80-d203-11eb-8ceb-cca668730064.gif">
+<img src="https://user-images.githubusercontent.com/67512011/122671963-18a37600-d204-11eb-91e8-a20dde84e3a2.gif">
+<img src="https://user-images.githubusercontent.com/67512011/122671969-1fca8400-d204-11eb-8dc0-6bb7fa03871b.gif">
