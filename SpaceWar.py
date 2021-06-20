@@ -16,7 +16,6 @@ BLUE = (0, 0, 255)
 GOLD = (255, 244, 143)
 
 # 파일경로
-# todo : 파일경로 설정
 background = 'backgroundMusic/'
 font = 'font/'
 images = 'images/'
@@ -747,7 +746,6 @@ def run():
             if event.type == pygame.KEYDOWN:
                 # left
                 if event.key == pygame.K_a:
-                    print("================================================================================")
                     spaceshipX -= 2.0
 
                 # right
@@ -787,6 +785,23 @@ def run():
                         nuclear.add(nuclear_launch())
                         nuclearCount -= 1
 
+                # 게임 종료
+                if event.key == pygame.K_ESCAPE:
+                    isBreak = False
+                    while True:
+                        question_image = pygame.image.load(images + 'exit.jpeg')
+                        screen.blit(question_image, (0, 0))
+                        pygame.display.update()
+                        for event in pygame.event.get():
+                            if event.type == pygame.KEYDOWN:
+                                if event.key == pygame.K_a:
+                                    sys.exit(0)
+                                if event.key == pygame.K_ESCAPE:
+                                    isBreak = True
+
+                        if(isBreak):
+                            break
+
             # 키보드 입력 중지 이벤트
             if event.type == pygame.KEYUP:
                 if event.key == pygame.K_a or event.key == pygame.K_d:
@@ -797,9 +812,6 @@ def run():
         # spaceship 좌표조정
         x += spaceshipX
         y += spaceshipY
-        print("X: " + str(spaceshipX))
-        print("Y: " + str(spaceshipY))
-
 
         # 우주선이 화면 밖으로 못나가도록
         if x <= 0 + player.centerX:
@@ -922,7 +934,7 @@ def gameStart():
 def gameEx():
     global buttonState
 
-    background = pygame.image.load(images + 'game_ex.png')
+    background = pygame.image.load(images + 'game_ex.jpeg')
 
     while True:
         screen.blit(background, (0, 0))
