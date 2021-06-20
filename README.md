@@ -32,7 +32,7 @@
 ### 조작
 전투기를 조작하며 총알과 미사일을 발사해보세요!
   
-<img src="https://user-images.githubusercontent.com/67512011/122671548-2e17a080-d202-11eb-8423-e4fc461c5607.gif"><img src="https://user-images.githubusercontent.com/67512011/122673022-8b632000-d209-11eb-8dda-17b59d2afa9f.gif">
+<img src="https://user-images.githubusercontent.com/67512011/122671548-2e17a080-d202-11eb-8423-e4fc461c5607.gif"><img src="https://user-images.githubusercontent.com/67512011/122673108-ee54b700-d209-11eb-83cf-178070819b05.gif">
 
 ### 스테이지
 한 스테이지가 끝날 때마다 보스가 등장하며 총 네 단계의 스테이지가 있습니다.
