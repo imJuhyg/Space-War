@@ -17,5 +17,5 @@
   
   
 ### 실행화면
-  
+<b>전투기를 조작하고 총알을 발사해보세요!</b>
 <img src="https://user-images.githubusercontent.com/67512011/122671548-2e17a080-d202-11eb-8423-e4fc461c5607.gif">
