@@ -31,3 +31,7 @@
 스테이지가 끝날때마다 전투기를 업그레이드 할 수 있습니다.
   
 <img src="https://user-images.githubusercontent.com/67512011/122672108-d29ae200-d204-11eb-9774-5f74e8cfbbd9.gif">
+  
+### 이벤트
+가끔 전기이벤트가 생성됩니다. 한번 닿기만해도 게임이 끝나니 조심하세요!
+<img src="https://user-images.githubusercontent.com/67512011/122672211-55bc3800-d205-11eb-95ba-d32fe1ae170a.gif">
