@@ -7,3 +7,6 @@
 
 ## Library
 <img width=300 height=89 src="https://user-images.githubusercontent.com/67512011/122669969-94002a00-d1fa-11eb-991b-60af09d870fc.gif">
+
+## 게임방법
+
