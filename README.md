@@ -1,5 +1,5 @@
 # Python Simple Shooter Game
-[3학년 1학기 IoT시스템실습 과목 프로젝트]
+[3학년 1학기 IoT시스템실습 과목 프로젝트(라즈베리파이)]
 
 데스크톱에서도 실행할 수 있도록 코드를 수정했습니다.
 
@@ -34,4 +34,5 @@
   
 ### 이벤트
 가끔 전기이벤트가 생성됩니다. 한번 닿기만해도 게임이 끝나니 조심하세요!
+
 <img src="https://user-images.githubusercontent.com/67512011/122672211-55bc3800-d205-11eb-95ba-d32fe1ae170a.gif">
