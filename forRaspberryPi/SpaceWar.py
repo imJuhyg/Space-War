@@ -709,7 +709,7 @@ def run():
                     screen.blit(bossExplosion02, (boss.rect.x, boss.rect.y - 70))
                     pygame.display.update()
 
-                # 이미지 출력이 다 끝나면 아래문장 실행
+                # 이미지 출력이 다 끝나면 아래문장 실행/
                 else:
                     bossExplosionImage = False  # 이미지 출력 중지
                     # 다음 라운드 진행
