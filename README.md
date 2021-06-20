@@ -1,4 +1,6 @@
-# Python Simple Shooter Game
+<img "https://user-images.githubusercontent.com/67512011/122672573-26a6c600-d207-11eb-9d35-4b0d4d043fc6.jpeg">
+
+
 [3학년 1학기 IoT시스템실습 과목 프로젝트]
 
 데스크톱에서도 실행할 수 있도록 코드를 수정했습니다.
