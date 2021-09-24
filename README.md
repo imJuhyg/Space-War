@@ -1,15 +1,6 @@
 # SimpleShooterGame - 'Space War' 
 
 <img width=450 height=201 src="https://user-images.githubusercontent.com/67512011/122805272-d95c4e80-d303-11eb-9a3b-b073ec9911a6.png">
-
-#
-[3학년 1학기 IoT시스템실습 과목 프로젝트]
-  
-  <b>회로 설계, 제품 디자인</b> 경성대학교 컴퓨터공학과 김경은
-  
-  <b>게임 디자인</b> 경성대학교 컴퓨터공학과 김다인
-  
-  <b>프로그래밍</b> 경성대학교 컴퓨터공학과 임주형  
     
 
 ## Library
@@ -30,7 +21,7 @@
   
 ## 실행 화면
 ### 조작
-전투기를 조작하며 총알과 미사일을 발사해보세요!
+전투기를 조작하며 총알과 미사일을 발사할 수 있습니다.
   
 <img src="https://user-images.githubusercontent.com/67512011/122671548-2e17a080-d202-11eb-8423-e4fc461c5607.gif"><img src="https://user-images.githubusercontent.com/67512011/122673108-ee54b700-d209-11eb-83cf-178070819b05.gif">
 
@@ -45,7 +36,7 @@
 <img src="https://user-images.githubusercontent.com/67512011/122672108-d29ae200-d204-11eb-9774-5f74e8cfbbd9.gif">
   
 ### 이벤트
-가끔 전기 이벤트가 생성됩니다. 한번 닿기만 해도 게임이 끝나니 조심하세요!
+가끔 전기 이벤트가 생성됩니다.
 
 <img src="https://user-images.githubusercontent.com/67512011/122672211-55bc3800-d205-11eb-95ba-d32fe1ae170a.gif">
 
