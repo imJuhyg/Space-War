@@ -1,4 +1,4 @@
-# SimpleShooterGame - 'Space War' 
+# Simple Shooter Game - 'Space War' 
 
 <img width=450 height=201 src="https://user-images.githubusercontent.com/67512011/122805272-d95c4e80-d303-11eb-9a3b-b073ec9911a6.png">
     
