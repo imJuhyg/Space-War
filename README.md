@@ -4,7 +4,7 @@
     
 
 ## 프로젝트 정보
-'''
+```
 프로젝트 명
  휴대용 게임기
 
@@ -21,7 +21,7 @@
  
 개발기간
  2020.03~2020.07
-'''
+```
 
 ## Library
 <img width=300 height=89 src="https://user-images.githubusercontent.com/67512011/122669969-94002a00-d1fa-11eb-991b-60af09d870fc.gif">
